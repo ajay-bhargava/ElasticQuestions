@@ -20,7 +20,7 @@ class ElasticSet {
 
 function GenerateElasticCertificationQuestion(subject: Category, index: string, mapping: string, data: string, context: ElasticSet[]) -> ElasticQuestion {
   // client "openai/gpt-4.1"
-  client "openai/gpt-4o"
+  client "openai/o3-mini"
   prompt #"
     {{_.role("system")}}
     You are an AI assistant trained to generated certification style questions for the Elastic Certified Engineer Exam. Your questions are targeted at the mapping provided by the user. Your goal is to create realistic and varied questions that reflect how Elastic has historially evaluated potential engineers in a proctored setting. For each question you generate, you will also generate a cognate answer that will be evaluated by an in-production Elasticsearch cluster. 
